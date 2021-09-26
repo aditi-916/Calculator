@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>CALCULATOR</title>
+   <center>  <h1>CALCULATOR</h1>  </center>
+</head>
+<body bgcolor="skyblue">
+
+     <center>
+   
+ <form name="myform">
+	<font color="black">First number:</font> &nbsp&nbsp&nbsp<input type="text" maxlength="7"name="first" value=0><br><br>
+        <font color="black">Second number:</font> &nbsp&nbsp&nbsp<input type="text" maxlength="7"name="second" value=0><br><br>
+	<font color="black">Answer:</font> &nbsp&nbsp&nbsp<input type="text" maxlength="7" name="result" value=0><br><br>
+        <input type="button" name="" value="+" onclick="add()">
+	<input type="button" name="" value="-" onclick="subtract()">
+	<input type="reset" name="" value="AC" onclick="clear()"><br><br>
+	<input type="button" name="" value="x" onclick="multiply()">
+	<input type="button" name="" value="/" onclick="divide()">
+	<input type="button" name="" value="%" onclick="modulo()"><br><br>
+        <input type="button" name="" value="ceil first" onclick="ceilfirst()">
+	<input type="button" name="" value="ceil second" onclick="ceilsecond()">
+	<input type="button" name="" value="ceil +" onclick="ceiladd()"><br><br>
+	<input type="button" name="" value="ceil -" onclick="ceilsub()">
+	<input type="button" name="" value="ceil *" onclick="ceilmultiply()">
+	<input type="button" name="" value="ceil /" onclick="ceildivide()"><br><br>
+	<input type="button" name="" value="ceil %" onclick="ceilmodulo()">
+        <input type="button" name="" value="floor first" onclick="floorfirst()">
+	<input type="button" name="" value="floor second" onclick="floorsecond()"><br><br>
+	<input type="button" name="" value="floor +" onclick="flooradd()">
+	<input type="button" name="" value="floor -" onclick="floorsub()">
+	<input type="button" name="" value="floor *" onclick="floormultiply()"><br><br>
+	<input type="button" name="" value="floor /" onclick="floordivide()">
+	<input type="button" name="" value="floor %" onclick="floormodulo()">
+        <input type="button" name="" value="round first" onclick="roundfirst()"><br><br>
+	<input type="button" name="" value="round second" onclick="roundsecond()">
+	<input type="button" name="" value="round +" onclick="roundadd()">
+	<input type="button" name="" value="round -" onclick="roundsub()"><br><br>
+	<input type="button" name="" value="round *" onclick="roundmultiply()">
+	<input type="button" name="" value="round /" onclick="rounddivide()">
+	<input type="button" name="" value="round %" onclick="roundmodulo()"><br><br>
+	</center>  </form>
+
+<!-- for styling -->
+       <style>
+	
+        .title{
+        border-radius: 10px;
+        margin-bottom: 10px;
+        text-align:center;
+        width: 10px;
+        color:	#F8F8FF	;
+        border: blue 1px;
+	}
+	input[type="button"]
+	{
+	border-radius: 10px;
+	background-#F8F8FF;
+	color: black;
+	border-color:#F8F8FF ;
+	width:10%;
+	}
+	input[type="reset"]
+	{
+	border-radius: 10px;
+	background-color:#F8F8FF;
+	color: black;
+	border-color:#F8F8FF;
+	width:10%;
+	}
+	input[type="text"]
+	{
+	border-radius: 10px;
+	text-align: right;
+	background-color:white;
+	border-color: black ;
+	width:10%
+	}
+	</style>
+
+
+<script type="text/javascript">
+	function add(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=first+second;
+		myform.result.value=result;
+                }
+
+	function subtract(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=first-second;
+		myform.result.value=result;
+                }	
+
+    function multiply(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=first*second;
+		myform.result.value=result;
+                }
+
+	function divide(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=first/second;
+		myform.result.value=result;
+                }
+
+	function modulo(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=first%second;
+		myform.result.value=result;
+                }
+
+
+	function ceilfirst(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.ceil(first);
+		myform.result.value=result;
+                }
+        
+           function ceilsecond(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.ceil(second);
+		myform.result.value=result;
+                }
+
+         function ceiladd(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.ceil(first+second);
+		myform.result.value=result;
+                }
+
+	function ceilsub(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.ceil(first-second);
+		myform.result.value=result;
+                }
+
+	function ceilmultiply(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.ceil(first*second);
+		myform.result.value=result;
+                }
+
+	function ceildivide(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.ceil(first/second);
+		myform.result.value=result;
+                }
+
+	function ceilmodulo(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.ceil(first%second);
+		myform.result.value=result;
+                }
+
+	function floorfirst(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.floor(first);
+		myform.result.value=result;
+                }
+
+	function floorsecond(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.floor(second);
+		myform.result.value=result;
+                }
+
+	function flooradd(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.floor(first+second);
+		myform.result.value=result;
+                }
+            function floorsub(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.floor(first-second);
+		myform.result.value=result;
+                }
+
+	function floormultiply(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.floor(first*second);
+		myform.result.value=result;
+                }
+
+function floordivide(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.floor(first/second);
+		myform.result.value=result;
+                }
+
+	function floormodulo(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.floor(first%second);
+		myform.result.value=result;
+                }
+	
+	function roundfirst(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.round(first);
+		myform.result.value=result;
+                }
+
+	function roundsecond(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.round(second);
+		myform.result.value=result;
+                }
+
+	function roundadd(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.round(first+second);
+		myform.result.value=result;
+                }
+
+           function roundsub(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.round(first-second);
+		myform.result.value=result;
+                }
+
+	function roundmultiply(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.round(first*second);
+		myform.result.value=result;
+                }
+
+function rounddivide(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.round(first/second);
+		myform.result.value=result;
+                }
+
+	function roundmodulo(){
+		first=parseFloat(myform.first.value);
+		second=parseFloat(myform.second.value);
+		result=Math.round(first%second);
+		myform.result.value=result;
+                }
+
+    </script>
+</body>
+</html>
